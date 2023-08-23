@@ -6,9 +6,9 @@ agent {
 }
 
 tools {
-
     git "my-git"
 }
+    
     stages {
         
         stage('Build Docker image') {
