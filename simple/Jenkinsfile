@@ -4,6 +4,11 @@ agent {
                      label "172.31.46.168"
     }
 }
+
+tools {
+
+    git "my-git"
+}
     stages {
         
         stage('Build Docker image') {
