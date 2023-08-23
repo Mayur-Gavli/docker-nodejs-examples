@@ -17,7 +17,7 @@ tools {
 
                 dir ('/home/ec2-user/workspace/assign-1/simple') { 
                 // Build the Docker image
-                sh 'docker build -t test_image:1.0 .'
+                sh 'sudo docker build -t test_image:1.0 .'
             }
         }
         } 
@@ -25,14 +25,14 @@ tools {
            
             steps {
                 // Log in to the Docker registry (e.g., Docker Hub)
-                sh 'docker login -u mayurgavli -p Mayur1990$'
+                sh 'sudo docker login -u mayurgavli -p Mayur1990$'
             }
         }
         stage('Push to Docker Registry') {
             steps {
                 // Push the Docker image to the registry
-                sh 'docker tag test_image:1.0 mayurgavli/mayur_npn:1.6'
-                sh 'docker push mayurgavli/mayur_npn:1.6'
+                sh 'sudo docker tag test_image:1.0 mayurgavli/mayur_npn:1.6'
+                sh 'sudo docker push mayurgavli/mayur_npn:1.6'
             }
         }
     }
