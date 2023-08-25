@@ -30,7 +30,7 @@ tools {
         }
         stage('Push to Docker Registry') {
             steps {
-                // Push the Docker image to the registry to publish image 
+                // Push the Docker image to the registry of docker to publish image  
                 sh 'sudo docker tag test_image:1.0 mayurgavli/mayur_npn:1.6'
                 sh 'sudo docker push mayurgavli/mayur_npn:1.6'
                 
